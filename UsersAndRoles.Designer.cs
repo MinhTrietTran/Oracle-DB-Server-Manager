@@ -35,6 +35,7 @@
             this.uSER_TableAdapter = new UsersManagement.DataSet1TableAdapters.USER_TableAdapter();
             this.usersDGV = new System.Windows.Forms.DataGridView();
             this.toolBarPanel = new System.Windows.Forms.Panel();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.usersAndRolesBtn = new System.Windows.Forms.Button();
             this.privilegesBtn = new System.Windows.Forms.Button();
             this.systemUsersBtn = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.rolesDGV = new System.Windows.Forms.DataGridView();
             this.roleNameTextBox = new System.Windows.Forms.TextBox();
             this.roleNameLabel = new System.Windows.Forms.Label();
-            this.logoutBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDGV)).BeginInit();
@@ -116,6 +116,17 @@
             this.toolBarPanel.Size = new System.Drawing.Size(1280, 100);
             this.toolBarPanel.TabIndex = 2;
             // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.Location = new System.Drawing.Point(769, 56);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(259, 45);
+            this.logoutBtn.TabIndex = 4;
+            this.logoutBtn.Text = "Log out";
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            // 
             // usersAndRolesBtn
             // 
             this.usersAndRolesBtn.BackColor = System.Drawing.Color.White;
@@ -149,6 +160,7 @@
             this.systemUsersBtn.TabIndex = 1;
             this.systemUsersBtn.Text = "System Users";
             this.systemUsersBtn.UseVisualStyleBackColor = false;
+            this.systemUsersBtn.Click += new System.EventHandler(this.systemUsersBtn_Click);
             // 
             // appName
             // 
@@ -321,17 +333,6 @@
             this.roleNameLabel.TabIndex = 9;
             this.roleNameLabel.Text = "Role Name";
             // 
-            // logoutBtn
-            // 
-            this.logoutBtn.BackColor = System.Drawing.Color.LightBlue;
-            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.Location = new System.Drawing.Point(769, 56);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(259, 45);
-            this.logoutBtn.TabIndex = 4;
-            this.logoutBtn.Text = "Log out";
-            this.logoutBtn.UseVisualStyleBackColor = false;
-            // 
             // UsersAndRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -344,6 +345,7 @@
             this.Controls.Add(this.toolBarPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UsersAndRoles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UsersAndRoles";
             this.Load += new System.EventHandler(this.UsersAndRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).EndInit();

@@ -34,8 +34,15 @@ namespace UsersManagement
                     using (OracleConnection oracleConnection = Connection.GetOracleConnection())
                     {
                         oracleConnection.Open();
-
-                        string query = $"ALTER USER {username} IDENTIFIED BY {pwdChange} ";
+                        string query = "";
+                        if (pwdChange == "")
+                        {
+                            query = $"ALTER USER {username} NO AUTHENTICATION";
+                        }
+                        else
+                        {
+                            query = $"ALTER USER {username} IDENTIFIED BY {pwdChange} ";
+                        }
                         using (OracleCommand command = new OracleCommand(query, oracleConnection))
                         {
                             command.ExecuteNonQuery();

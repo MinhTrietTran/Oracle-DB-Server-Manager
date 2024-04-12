@@ -26,3 +26,4 @@ E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.AddUser.resources
 E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.EditUser.resources
 E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.AddRole.resources
 E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.EditRole.resources
+E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.SystemUsers.resources

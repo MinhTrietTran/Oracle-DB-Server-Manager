@@ -225,5 +225,13 @@ namespace UsersManagement
         {
             Application.Exit();
         }
+
+        // Flow
+        private void systemUsersBtn_Click(object sender, EventArgs e)
+        {
+            SystemUsers obj = new SystemUsers();
+            this.Hide();
+            obj.Show();
+        }
     }
 }

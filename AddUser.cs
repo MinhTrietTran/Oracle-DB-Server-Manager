@@ -24,7 +24,7 @@ namespace UsersManagement
         {
             if (userNameTextBox.Text == "" )
             {
-                MessageBox.Show("Please complete all information");
+                MessageBox.Show("Please complete the information");
             }
             else
             {
@@ -36,14 +36,21 @@ namespace UsersManagement
                         {
                             using (OracleConnection oracleConnection = Connection.GetOracleConnection())
                             {
-                                oracleConnection.Open();    
-
-                                string query = $"CREATE USER {username} IDENTIFIED BY {password}";
-                                using (OracleCommand command = new OracleCommand(query, oracleConnection))
-                                {
-                                    command.ExecuteNonQuery();
-                                    MessageBox.Show("User added successfully.");
-                                }
+                                oracleConnection.Open();
+                                string query = "";
+                            if (password == "")
+                            {
+                                query = $"CREATE USER {username} NO AUTHENTICATION";
+                            }
+                            else
+                            {
+                                query = $"CREATE USER {username} IDENTIFIED BY {password}";
+                            }
+                            using (OracleCommand command = new OracleCommand(query, oracleConnection))
+                            {
+                                command.ExecuteNonQuery();
+                                MessageBox.Show("User added successfully.");
+                            }
                                 oracleConnection.Close();
                             }
                             // Change the list
