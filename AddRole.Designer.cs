@@ -43,9 +43,10 @@
             this.createUserBtn.BackColor = System.Drawing.Color.White;
             this.createUserBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createUserBtn.ForeColor = System.Drawing.Color.Black;
-            this.createUserBtn.Location = new System.Drawing.Point(268, 403);
+            this.createUserBtn.Location = new System.Drawing.Point(201, 327);
+            this.createUserBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.createUserBtn.Name = "createUserBtn";
-            this.createUserBtn.Size = new System.Drawing.Size(102, 37);
+            this.createUserBtn.Size = new System.Drawing.Size(76, 30);
             this.createUserBtn.TabIndex = 14;
             this.createUserBtn.Text = "Create";
             this.createUserBtn.UseVisualStyleBackColor = false;
@@ -55,18 +56,20 @@
             // 
             this.roleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roleTextBox.ForeColor = System.Drawing.Color.Black;
-            this.roleTextBox.Location = new System.Drawing.Point(287, 138);
+            this.roleTextBox.Location = new System.Drawing.Point(215, 112);
+            this.roleTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roleTextBox.Name = "roleTextBox";
-            this.roleTextBox.Size = new System.Drawing.Size(230, 24);
+            this.roleTextBox.Size = new System.Drawing.Size(174, 21);
             this.roleTextBox.TabIndex = 12;
             // 
             // userNameLabel
             // 
             this.userNameLabel.AutoSize = true;
             this.userNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameLabel.Location = new System.Drawing.Point(116, 133);
+            this.userNameLabel.Location = new System.Drawing.Point(87, 108);
+            this.userNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(68, 29);
+            this.userNameLabel.Size = new System.Drawing.Size(53, 24);
             this.userNameLabel.TabIndex = 10;
             this.userNameLabel.Text = "Role";
             // 
@@ -74,9 +77,10 @@
             // 
             this.addANewRoleLabel.AutoSize = true;
             this.addANewRoleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addANewRoleLabel.Location = new System.Drawing.Point(28, 20);
+            this.addANewRoleLabel.Location = new System.Drawing.Point(21, 16);
+            this.addANewRoleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addANewRoleLabel.Name = "addANewRoleLabel";
-            this.addANewRoleLabel.Size = new System.Drawing.Size(188, 29);
+            this.addANewRoleLabel.Size = new System.Drawing.Size(152, 24);
             this.addANewRoleLabel.TabIndex = 9;
             this.addANewRoleLabel.Text = "Add a new role";
             // 
@@ -84,9 +88,10 @@
             // 
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(116, 242);
+            this.passwordLabel.Location = new System.Drawing.Point(87, 197);
+            this.passwordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(128, 29);
+            this.passwordLabel.Size = new System.Drawing.Size(100, 24);
             this.passwordLabel.TabIndex = 15;
             this.passwordLabel.Text = "Password";
             // 
@@ -94,9 +99,10 @@
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordTextBox.ForeColor = System.Drawing.Color.Black;
-            this.passwordTextBox.Location = new System.Drawing.Point(287, 247);
+            this.passwordTextBox.Location = new System.Drawing.Point(215, 201);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(230, 24);
+            this.passwordTextBox.Size = new System.Drawing.Size(174, 21);
             this.passwordTextBox.TabIndex = 16;
             // 
             // noticeLabel
@@ -104,9 +110,10 @@
             this.noticeLabel.AutoSize = true;
             this.noticeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noticeLabel.ForeColor = System.Drawing.Color.Red;
-            this.noticeLabel.Location = new System.Drawing.Point(142, 357);
+            this.noticeLabel.Location = new System.Drawing.Point(106, 290);
+            this.noticeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.noticeLabel.Name = "noticeLabel";
-            this.noticeLabel.Size = new System.Drawing.Size(347, 20);
+            this.noticeLabel.Size = new System.Drawing.Size(295, 17);
             this.noticeLabel.TabIndex = 17;
             this.noticeLabel.Text = "You can leave the password blank if you want";
             // 
@@ -115,9 +122,10 @@
             this.exitBtn.BackColor = System.Drawing.Color.Red;
             this.exitBtn.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.exitBtn.Location = new System.Drawing.Point(591, 12);
+            this.exitBtn.Location = new System.Drawing.Point(443, 10);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(37, 35);
+            this.exitBtn.Size = new System.Drawing.Size(28, 28);
             this.exitBtn.TabIndex = 18;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = false;
@@ -125,9 +133,9 @@
             // 
             // AddRole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 480);
+            this.ClientSize = new System.Drawing.Size(480, 390);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.noticeLabel);
             this.Controls.Add(this.passwordTextBox);
@@ -137,8 +145,10 @@
             this.Controls.Add(this.userNameLabel);
             this.Controls.Add(this.addANewRoleLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddRole";
             this.Text = "AddRole";
+            this.Load += new System.EventHandler(this.AddRole_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

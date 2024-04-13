@@ -1,0 +1,169 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|d:\\nam3\\hkii\\atbmhttt\\phanhe1\\oracle-db-server-manager\\grantroleuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|solutionrelative:grantroleuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|d:\\nam3\\hkii\\atbmhttt\\phanhe1\\oracle-db-server-manager\\addprivilegesmem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|solutionrelative:addprivilegesmem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|d:\\nam3\\hkii\\atbmhttt\\phanhe1\\oracle-db-server-manager\\grantroleuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|solutionrelative:grantroleuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\privileges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|solutionrelative:privileges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\privileges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|solutionrelative:privileges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\addprivilegesmem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|solutionrelative:addprivilegesmem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\privileges.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|solutionrelative:privileges.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\usersandroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|solutionrelative:usersandroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\usersandroles.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A778587-6174-45EB-A527-FC902E676A9E}|UsersManagement.csproj|solutionrelative:usersandroles.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GrantRoleUser.cs",
+              "DocumentMoniker": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\GrantRoleUser.cs",
+              "RelativeDocumentMoniker": "GrantRoleUser.cs",
+              "ToolTip": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\GrantRoleUser.cs",
+              "RelativeToolTip": "GrantRoleUser.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAmwEkAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T15:16:37.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddPrivilegesMem.cs",
+              "DocumentMoniker": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\AddPrivilegesMem.cs",
+              "RelativeDocumentMoniker": "AddPrivilegesMem.cs",
+              "ToolTip": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\AddPrivilegesMem.cs",
+              "RelativeToolTip": "AddPrivilegesMem.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAqwJUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T18:06:41.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GrantRoleUser.cs [Design]",
+              "DocumentMoniker": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\GrantRoleUser.cs",
+              "RelativeDocumentMoniker": "GrantRoleUser.cs",
+              "ToolTip": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\GrantRoleUser.cs [Design]",
+              "RelativeToolTip": "GrantRoleUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T15:12:20.494Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddPrivilegesMem.cs [Design]",
+              "DocumentMoniker": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\AddPrivilegesMem.cs",
+              "RelativeDocumentMoniker": "AddPrivilegesMem.cs",
+              "ToolTip": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\AddPrivilegesMem.cs [Design]",
+              "RelativeToolTip": "AddPrivilegesMem.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T18:10:05.831Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Privileges.cs [Design]",
+              "DocumentMoniker": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\Privileges.cs",
+              "RelativeDocumentMoniker": "Privileges.cs",
+              "ToolTip": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\Privileges.cs [Design]",
+              "RelativeToolTip": "Privileges.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T18:01:22.82Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Privileges.cs",
+              "DocumentMoniker": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\Privileges.cs",
+              "RelativeDocumentMoniker": "Privileges.cs",
+              "ToolTip": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\Privileges.cs",
+              "RelativeToolTip": "Privileges.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAA6wGkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T16:35:49.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Privileges.Designer.cs",
+              "DocumentMoniker": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\Privileges.Designer.cs",
+              "RelativeDocumentMoniker": "Privileges.Designer.cs",
+              "ToolTip": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\Privileges.Designer.cs",
+              "RelativeToolTip": "Privileges.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T16:35:46.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersAndRoles.cs",
+              "DocumentMoniker": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\UsersAndRoles.cs",
+              "RelativeDocumentMoniker": "UsersAndRoles.cs",
+              "ToolTip": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\UsersAndRoles.cs",
+              "RelativeToolTip": "UsersAndRoles.cs",
+              "ViewState": "AQIAAM4AAAAAAAAAAAAswOYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T15:00:31.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsersAndRoles.Designer.cs",
+              "DocumentMoniker": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\UsersAndRoles.Designer.cs",
+              "RelativeDocumentMoniker": "UsersAndRoles.Designer.cs",
+              "ToolTip": "D:\\Nam3\\HKII\\ATBMHTTT\\PhanHe1\\Oracle-DB-Server-Manager\\UsersAndRoles.Designer.cs",
+              "RelativeToolTip": "UsersAndRoles.Designer.cs",
+              "ViewState": "AQIAAFsBAAAAAAAAAAAwwHIBAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T16:57:20.853Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

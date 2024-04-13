@@ -35,6 +35,7 @@
             this.uSER_TableAdapter = new UsersManagement.DataSet1TableAdapters.USER_TableAdapter();
             this.usersDGV = new System.Windows.Forms.DataGridView();
             this.toolBarPanel = new System.Windows.Forms.Panel();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.usersAndRolesBtn = new System.Windows.Forms.Button();
             this.privilegesBtn = new System.Windows.Forms.Button();
             this.systemUsersBtn = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.rolesDGV = new System.Windows.Forms.DataGridView();
             this.roleNameTextBox = new System.Windows.Forms.TextBox();
             this.roleNameLabel = new System.Windows.Forms.Label();
-            this.logoutBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDGV)).BeginInit();
@@ -67,9 +67,10 @@
             this.exitBtn.BackColor = System.Drawing.Color.Red;
             this.exitBtn.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.exitBtn.Location = new System.Drawing.Point(1231, 12);
+            this.exitBtn.Location = new System.Drawing.Point(923, 10);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(37, 35);
+            this.exitBtn.Size = new System.Drawing.Size(28, 28);
             this.exitBtn.TabIndex = 0;
             this.exitBtn.Text = "X";
             this.exitBtn.UseVisualStyleBackColor = false;
@@ -93,12 +94,13 @@
             // 
             this.usersDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.usersDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usersDGV.Location = new System.Drawing.Point(14, 53);
+            this.usersDGV.Location = new System.Drawing.Point(10, 43);
+            this.usersDGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usersDGV.Name = "usersDGV";
             this.usersDGV.RowHeadersWidth = 51;
             this.usersDGV.RowTemplate.Height = 24;
             this.usersDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.usersDGV.Size = new System.Drawing.Size(404, 533);
+            this.usersDGV.Size = new System.Drawing.Size(303, 433);
             this.usersDGV.TabIndex = 1;
             this.usersDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.usersDGV_CellClick);
             // 
@@ -112,17 +114,31 @@
             this.toolBarPanel.Controls.Add(this.appName);
             this.toolBarPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.toolBarPanel.Location = new System.Drawing.Point(0, 0);
+            this.toolBarPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.toolBarPanel.Name = "toolBarPanel";
-            this.toolBarPanel.Size = new System.Drawing.Size(1280, 100);
+            this.toolBarPanel.Size = new System.Drawing.Size(960, 81);
             this.toolBarPanel.TabIndex = 2;
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutBtn.Location = new System.Drawing.Point(573, 46);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(194, 37);
+            this.logoutBtn.TabIndex = 4;
+            this.logoutBtn.Text = "Log out";
+            this.logoutBtn.UseVisualStyleBackColor = false;
             // 
             // usersAndRolesBtn
             // 
             this.usersAndRolesBtn.BackColor = System.Drawing.Color.White;
             this.usersAndRolesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usersAndRolesBtn.Location = new System.Drawing.Point(513, 56);
+            this.usersAndRolesBtn.Location = new System.Drawing.Point(385, 46);
+            this.usersAndRolesBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usersAndRolesBtn.Name = "usersAndRolesBtn";
-            this.usersAndRolesBtn.Size = new System.Drawing.Size(259, 45);
+            this.usersAndRolesBtn.Size = new System.Drawing.Size(194, 37);
             this.usersAndRolesBtn.TabIndex = 3;
             this.usersAndRolesBtn.Text = "Users and Roles";
             this.usersAndRolesBtn.UseVisualStyleBackColor = false;
@@ -131,21 +147,24 @@
             // 
             this.privilegesBtn.BackColor = System.Drawing.Color.LightBlue;
             this.privilegesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.privilegesBtn.Location = new System.Drawing.Point(257, 56);
+            this.privilegesBtn.Location = new System.Drawing.Point(193, 46);
+            this.privilegesBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.privilegesBtn.Name = "privilegesBtn";
-            this.privilegesBtn.Size = new System.Drawing.Size(259, 45);
+            this.privilegesBtn.Size = new System.Drawing.Size(194, 37);
             this.privilegesBtn.TabIndex = 2;
             this.privilegesBtn.Text = "Privileges ";
             this.privilegesBtn.UseVisualStyleBackColor = false;
+            this.privilegesBtn.Click += new System.EventHandler(this.privilegesBtn_Click);
             // 
             // systemUsersBtn
             // 
             this.systemUsersBtn.BackColor = System.Drawing.Color.LightBlue;
             this.systemUsersBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.systemUsersBtn.ForeColor = System.Drawing.Color.Black;
-            this.systemUsersBtn.Location = new System.Drawing.Point(0, 56);
+            this.systemUsersBtn.Location = new System.Drawing.Point(0, 46);
+            this.systemUsersBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.systemUsersBtn.Name = "systemUsersBtn";
-            this.systemUsersBtn.Size = new System.Drawing.Size(259, 45);
+            this.systemUsersBtn.Size = new System.Drawing.Size(194, 37);
             this.systemUsersBtn.TabIndex = 1;
             this.systemUsersBtn.Text = "System Users";
             this.systemUsersBtn.UseVisualStyleBackColor = false;
@@ -154,9 +173,10 @@
             // 
             this.appName.AutoSize = true;
             this.appName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.appName.Location = new System.Drawing.Point(10, 7);
+            this.appName.Location = new System.Drawing.Point(8, 6);
+            this.appName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.appName.Name = "appName";
-            this.appName.Size = new System.Drawing.Size(268, 20);
+            this.appName.Size = new System.Drawing.Size(231, 17);
             this.appName.TabIndex = 0;
             this.appName.Text = "Oracle DB Server Manager 1.0";
             // 
@@ -169,9 +189,10 @@
             this.leftPanel.Controls.Add(this.userNameTextBox);
             this.leftPanel.Controls.Add(this.userNameLabel);
             this.leftPanel.Controls.Add(this.usersDGV);
-            this.leftPanel.Location = new System.Drawing.Point(31, 108);
+            this.leftPanel.Location = new System.Drawing.Point(23, 88);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(600, 600);
+            this.leftPanel.Size = new System.Drawing.Size(450, 488);
             this.leftPanel.TabIndex = 3;
             // 
             // editUserBtn
@@ -179,9 +200,10 @@
             this.editUserBtn.BackColor = System.Drawing.Color.Lime;
             this.editUserBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editUserBtn.ForeColor = System.Drawing.Color.Black;
-            this.editUserBtn.Location = new System.Drawing.Point(456, 176);
+            this.editUserBtn.Location = new System.Drawing.Point(342, 143);
+            this.editUserBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.editUserBtn.Name = "editUserBtn";
-            this.editUserBtn.Size = new System.Drawing.Size(102, 37);
+            this.editUserBtn.Size = new System.Drawing.Size(76, 30);
             this.editUserBtn.TabIndex = 8;
             this.editUserBtn.Text = "Edit";
             this.editUserBtn.UseVisualStyleBackColor = false;
@@ -192,9 +214,10 @@
             this.deleteUserBtn.BackColor = System.Drawing.Color.Red;
             this.deleteUserBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteUserBtn.ForeColor = System.Drawing.Color.Black;
-            this.deleteUserBtn.Location = new System.Drawing.Point(456, 112);
+            this.deleteUserBtn.Location = new System.Drawing.Point(342, 91);
+            this.deleteUserBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteUserBtn.Name = "deleteUserBtn";
-            this.deleteUserBtn.Size = new System.Drawing.Size(102, 37);
+            this.deleteUserBtn.Size = new System.Drawing.Size(76, 30);
             this.deleteUserBtn.TabIndex = 7;
             this.deleteUserBtn.Text = "Delete";
             this.deleteUserBtn.UseVisualStyleBackColor = false;
@@ -205,9 +228,10 @@
             this.addUserBtn.BackColor = System.Drawing.Color.Black;
             this.addUserBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUserBtn.ForeColor = System.Drawing.Color.White;
-            this.addUserBtn.Location = new System.Drawing.Point(456, 53);
+            this.addUserBtn.Location = new System.Drawing.Point(342, 43);
+            this.addUserBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addUserBtn.Name = "addUserBtn";
-            this.addUserBtn.Size = new System.Drawing.Size(102, 37);
+            this.addUserBtn.Size = new System.Drawing.Size(76, 30);
             this.addUserBtn.TabIndex = 6;
             this.addUserBtn.Text = "Add";
             this.addUserBtn.UseVisualStyleBackColor = false;
@@ -217,9 +241,10 @@
             // 
             this.userNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameTextBox.ForeColor = System.Drawing.Color.Black;
-            this.userNameTextBox.Location = new System.Drawing.Point(165, 11);
+            this.userNameTextBox.Location = new System.Drawing.Point(124, 9);
+            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.userNameTextBox.Name = "userNameTextBox";
-            this.userNameTextBox.Size = new System.Drawing.Size(230, 24);
+            this.userNameTextBox.Size = new System.Drawing.Size(174, 21);
             this.userNameTextBox.TabIndex = 5;
             this.userNameTextBox.TextChanged += new System.EventHandler(this.userNameTextBox_TextChanged);
             // 
@@ -229,9 +254,10 @@
             this.userNameLabel.BackColor = System.Drawing.Color.SteelBlue;
             this.userNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.userNameLabel.Location = new System.Drawing.Point(10, 11);
+            this.userNameLabel.Location = new System.Drawing.Point(8, 9);
+            this.userNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(109, 22);
+            this.userNameLabel.Size = new System.Drawing.Size(93, 18);
             this.userNameLabel.TabIndex = 4;
             this.userNameLabel.Text = "User Name";
             // 
@@ -244,9 +270,10 @@
             this.rightPanel.Controls.Add(this.rolesDGV);
             this.rightPanel.Controls.Add(this.roleNameTextBox);
             this.rightPanel.Controls.Add(this.roleNameLabel);
-            this.rightPanel.Location = new System.Drawing.Point(658, 108);
+            this.rightPanel.Location = new System.Drawing.Point(494, 88);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(600, 600);
+            this.rightPanel.Size = new System.Drawing.Size(450, 488);
             this.rightPanel.TabIndex = 4;
             // 
             // editRoleBtn
@@ -254,9 +281,10 @@
             this.editRoleBtn.BackColor = System.Drawing.Color.Lime;
             this.editRoleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editRoleBtn.ForeColor = System.Drawing.Color.Black;
-            this.editRoleBtn.Location = new System.Drawing.Point(466, 176);
+            this.editRoleBtn.Location = new System.Drawing.Point(350, 143);
+            this.editRoleBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.editRoleBtn.Name = "editRoleBtn";
-            this.editRoleBtn.Size = new System.Drawing.Size(102, 37);
+            this.editRoleBtn.Size = new System.Drawing.Size(76, 30);
             this.editRoleBtn.TabIndex = 9;
             this.editRoleBtn.Text = "Edit";
             this.editRoleBtn.UseVisualStyleBackColor = false;
@@ -267,9 +295,10 @@
             this.deleteRoleBtn.BackColor = System.Drawing.Color.Red;
             this.deleteRoleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteRoleBtn.ForeColor = System.Drawing.Color.Black;
-            this.deleteRoleBtn.Location = new System.Drawing.Point(466, 112);
+            this.deleteRoleBtn.Location = new System.Drawing.Point(350, 91);
+            this.deleteRoleBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deleteRoleBtn.Name = "deleteRoleBtn";
-            this.deleteRoleBtn.Size = new System.Drawing.Size(102, 37);
+            this.deleteRoleBtn.Size = new System.Drawing.Size(76, 30);
             this.deleteRoleBtn.TabIndex = 9;
             this.deleteRoleBtn.Text = "Delete";
             this.deleteRoleBtn.UseVisualStyleBackColor = false;
@@ -280,9 +309,10 @@
             this.addRoleBtn.BackColor = System.Drawing.Color.Black;
             this.addRoleBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addRoleBtn.ForeColor = System.Drawing.Color.White;
-            this.addRoleBtn.Location = new System.Drawing.Point(466, 53);
+            this.addRoleBtn.Location = new System.Drawing.Point(350, 43);
+            this.addRoleBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addRoleBtn.Name = "addRoleBtn";
-            this.addRoleBtn.Size = new System.Drawing.Size(102, 37);
+            this.addRoleBtn.Size = new System.Drawing.Size(76, 30);
             this.addRoleBtn.TabIndex = 9;
             this.addRoleBtn.Text = "Add";
             this.addRoleBtn.UseVisualStyleBackColor = false;
@@ -292,20 +322,22 @@
             // 
             this.rolesDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.rolesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.rolesDGV.Location = new System.Drawing.Point(21, 53);
+            this.rolesDGV.Location = new System.Drawing.Point(16, 43);
+            this.rolesDGV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rolesDGV.Name = "rolesDGV";
             this.rolesDGV.RowHeadersWidth = 51;
             this.rolesDGV.RowTemplate.Height = 24;
             this.rolesDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.rolesDGV.Size = new System.Drawing.Size(404, 533);
+            this.rolesDGV.Size = new System.Drawing.Size(303, 433);
             this.rolesDGV.TabIndex = 9;
             this.rolesDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rolesDGV_CellClick);
             // 
             // roleNameTextBox
             // 
-            this.roleNameTextBox.Location = new System.Drawing.Point(170, 11);
+            this.roleNameTextBox.Location = new System.Drawing.Point(128, 9);
+            this.roleNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roleNameTextBox.Name = "roleNameTextBox";
-            this.roleNameTextBox.Size = new System.Drawing.Size(237, 22);
+            this.roleNameTextBox.Size = new System.Drawing.Size(179, 20);
             this.roleNameTextBox.TabIndex = 9;
             this.roleNameTextBox.TextChanged += new System.EventHandler(this.roleNameTextBox_TextChanged);
             // 
@@ -315,34 +347,25 @@
             this.roleNameLabel.BackColor = System.Drawing.Color.SteelBlue;
             this.roleNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roleNameLabel.ForeColor = System.Drawing.Color.Yellow;
-            this.roleNameLabel.Location = new System.Drawing.Point(17, 11);
+            this.roleNameLabel.Location = new System.Drawing.Point(13, 9);
+            this.roleNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.roleNameLabel.Name = "roleNameLabel";
-            this.roleNameLabel.Size = new System.Drawing.Size(108, 22);
+            this.roleNameLabel.Size = new System.Drawing.Size(92, 18);
             this.roleNameLabel.TabIndex = 9;
             this.roleNameLabel.Text = "Role Name";
             // 
-            // logoutBtn
-            // 
-            this.logoutBtn.BackColor = System.Drawing.Color.LightBlue;
-            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.Location = new System.Drawing.Point(769, 56);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(259, 45);
-            this.logoutBtn.TabIndex = 4;
-            this.logoutBtn.Text = "Log out";
-            this.logoutBtn.UseVisualStyleBackColor = false;
-            // 
             // UsersAndRoles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(960, 585);
             this.Controls.Add(this.rightPanel);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.toolBarPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UsersAndRoles";
             this.Text = "UsersAndRoles";
             this.Load += new System.EventHandler(this.UsersAndRoles_Load);

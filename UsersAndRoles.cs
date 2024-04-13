@@ -225,5 +225,12 @@ namespace UsersManagement
         {
             Application.Exit();
         }
+
+        private void privilegesBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Privileges newForm = new Privileges();
+            newForm.Show();
+        }
     }
 }
