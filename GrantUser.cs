@@ -16,7 +16,6 @@ namespace UsersManagement
         public string UsernameSelected { get; set; }
         private string Privilege;
         private string table;
-        public bool IsCol { get; set; }
         public GrantUser()
         {
             InitializeComponent();
@@ -30,16 +29,8 @@ namespace UsersManagement
 
         private void GrantUser_Load(object sender, EventArgs e)
         {
-            if (IsCol == false)
-            { 
-                attributesLabel.Hide();
-                attributesDGV.Hide();
-            }
-            else
-            {
-                LoadColDGV();
-            }
             usernameTextBox.Text = UsernameSelected;
+            attributesDGV.Hide();
         }
         private void GetTable()
         {
@@ -99,22 +90,39 @@ namespace UsersManagement
             }
         }
 
+        private List<string> GetCheckedColumns(DataGridView dgv)
+        {
+            List<string> checkedColumns = new List<string>();
+
+            // Duyệt qua các hàng trong DataGridView
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                // Kiểm tra xem hàng có được chọn không
+                if (row.Cells[0].Value != null && (bool)row.Cells[0].Value)
+                {
+                    // Lấy tên cột từ HeaderCell của hàng
+                    string columnName = row.HeaderCell.Value.ToString();
+
+                    // Thêm tên cột vào mảng
+                    checkedColumns.Add(columnName);
+                }
+            }
+
+            return checkedColumns;
+        }
+
         private void grantBtn_Click(object sender, EventArgs e)
         {
             string username = UsernameSelected;
             string privilege = Privilege;
             string table = selectTableComboBox.SelectedValue.ToString();
             bool withGrantOption = false;
-            if (attributesDGV.Visible == true)
+            if (withGrantOptionCheckBox.Checked == true)
             {
-                // Code rieng cho truong hop them toi column
+                withGrantOption = true;
             }
-            else // Truong hop chi them tren table
+            if (grantToColCheckBox.Checked == false)
             {
-                if (withGrantOptionCheckBox.Checked == true)
-                {
-                    withGrantOption = true;
-                }
 
                 if (MessageBox.Show("Are you sure you want to grant this privilege to the above user?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
@@ -152,32 +160,92 @@ namespace UsersManagement
                     }
 
                 }
+                else
+                {
+                    MessageBox.Show("Ban phan quyen den muc cot");
+                    // Code chuc nang cuoi
+                    LoadColDGV();
+                    List<string> col = new List<string>(){"NAME" };//GetCheckedColumns(attributesDGV);
+                    if(col.Count() == 0)
+                    {
+                        MessageBox.Show("Please check at least one column to grant!");
+                    }
+                    else
+                    {
+                        try
+                        {
+                            using (OracleConnection oracleConnection = Connection.GetOracleConnection())
+                            {
+                                oracleConnection.Open();
+                                string query = $"GRANT {privilege} (";
+                                //MessageBox.Show(withGrantOption.ToString());
+                                for(int i = 0; i < col.Count(); i++)
+                                {
+                                    query += col[i];
+                                    if (i != col.Count() - 1)
+                                    {
+                                        query += ",";
+                                    }
+                                }
+                                query += ")";
+                                if (withGrantOption == true)
+                                {
+                                    query += $" ON {table} TO {username} WITH GRANT OPTION";
+                                }
+                                else
+                                {
+                                    query += $" ON {table} TO {username}";
+                                }
+                                using (OracleCommand command = new OracleCommand(query, oracleConnection))
+                                {
+                                    command.ExecuteNonQuery();
+                                    MessageBox.Show("Privilege granted to column level successfully.");
+                                }
+                                oracleConnection.Close();
+                            }
+                            // Exit adding window
+                            this.Hide();
+
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error granting to user to column level: " + ex.Message);
+                        }
+                    }
+                }
             }
-            
+
         }
 
-        private void selectPrivilegeComboBox_TextChanged(object sender, EventArgs e)
+        private void grantToColCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            Privilege = selectPrivilegeComboBox.Text;
-            if (Privilege == "DELETE" || Privilege == "INSERT")
+            if(grantToColCheckBox.Checked == true)
             {
-                attributesLabel.Hide();
-                attributesDGV.Hide();
+                if (selectPrivilegeComboBox.Text == "SELECT" || selectPrivilegeComboBox.Text == "UPDATE")
+                {
+                    attributesDGV.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Only allow grant to column for SELECT OR UPDATE !");
+                }
             }
-            if ((Privilege == "SELECT" || Privilege == "UPDATE") && IsCol == true)
+            else
             {
-                attributesLabel.Show();
-                attributesDGV.Show();
+                attributesDGV.Hide();
             }
         }
 
         private void selectTableComboBox_TextChanged(object sender, EventArgs e)
         {
             table = selectTableComboBox.Text;
-            if (IsCol == true)
-            {
-                LoadColDGV();
-            }
+            LoadColDGV();   
+        }
+
+        private void selectPrivilegeComboBox_TextChanged(object sender, EventArgs e)
+        {
+            Privilege = selectPrivilegeComboBox.Text;
         }
     }
 }

@@ -361,9 +361,9 @@
             this.roleNameLabel.ForeColor = System.Drawing.Color.Yellow;
             this.roleNameLabel.Location = new System.Drawing.Point(25, 10);
             this.roleNameLabel.Name = "roleNameLabel";
-            this.roleNameLabel.Size = new System.Drawing.Size(109, 22);
+            this.roleNameLabel.Size = new System.Drawing.Size(105, 22);
             this.roleNameLabel.TabIndex = 9;
-            this.roleNameLabel.Text = "User Name";
+            this.roleNameLabel.Text = "Role name";
             // 
             // rolesPrivsDGV
             // 

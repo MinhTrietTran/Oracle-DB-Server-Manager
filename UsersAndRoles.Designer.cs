@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.exitBtn = new System.Windows.Forms.Button();
             this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.dataSet1 = new UsersManagement.DataSet1();
-            //this.uSER_TableAdapter = new UsersManagement.DataSet1TableAdapters.USER_TableAdapter();
             this.usersDGV = new System.Windows.Forms.DataGridView();
             this.toolBarPanel = new System.Windows.Forms.Panel();
             this.refreshBtn = new System.Windows.Forms.Button();
@@ -55,7 +53,6 @@
             this.roleNameTextBox = new System.Windows.Forms.TextBox();
             this.roleNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDGV)).BeginInit();
             this.toolBarPanel.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -79,16 +76,6 @@
             // uSERBindingSource
             // 
             this.uSERBindingSource.DataMember = "USER$";
-            //this.uSERBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            //this.dataSet1.DataSetName = "DataSet1";
-            //this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uSER_TableAdapter
-            // 
-            //this.uSER_TableAdapter.ClearBeforeFill = true;
             // 
             // usersDGV
             // 
@@ -182,6 +169,7 @@
             // 
             this.appName.AutoSize = true;
             this.appName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appName.ForeColor = System.Drawing.Color.DarkBlue;
             this.appName.Location = new System.Drawing.Point(10, 7);
             this.appName.Name = "appName";
             this.appName.Size = new System.Drawing.Size(268, 20);
@@ -367,7 +355,6 @@
             this.Text = "UsersAndRoles";
             this.Load += new System.EventHandler(this.UsersAndRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDGV)).EndInit();
             this.toolBarPanel.ResumeLayout(false);
             this.toolBarPanel.PerformLayout();

@@ -15,7 +15,7 @@ namespace UsersManagement
     {
         public string RoleSelected { get; set; }
         private string Privilege;
-        public bool IsCol { get; set; }
+        //public bool IsCol { get; set; }
         public GrantRole()
         {
             InitializeComponent();
@@ -29,11 +29,6 @@ namespace UsersManagement
 
         private void GrantRole_Load(object sender, EventArgs e)
         {
-            if (IsCol == false)
-            {
-                attributesLabel.Hide();
-                attributesDGV.Hide();
-            }
             roleTextBox.Text = RoleSelected;
         }
 

@@ -38,9 +38,9 @@
             this.selectTabLabel = new System.Windows.Forms.Label();
             this.selectTableComboBox = new System.Windows.Forms.ComboBox();
             this.attributesDGV = new System.Windows.Forms.DataGridView();
-            this.attributesLabel = new System.Windows.Forms.Label();
-            this.withGrantOptionCheckBox = new System.Windows.Forms.CheckBox();
             this.Column = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.withGrantOptionCheckBox = new System.Windows.Forms.CheckBox();
+            this.grantToColCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.attributesDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,15 +156,12 @@
             this.attributesDGV.Size = new System.Drawing.Size(254, 261);
             this.attributesDGV.TabIndex = 25;
             // 
-            // attributesLabel
+            // Column
             // 
-            this.attributesLabel.AutoSize = true;
-            this.attributesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.attributesLabel.Location = new System.Drawing.Point(734, 99);
-            this.attributesLabel.Name = "attributesLabel";
-            this.attributesLabel.Size = new System.Drawing.Size(115, 29);
-            this.attributesLabel.TabIndex = 26;
-            this.attributesLabel.Text = "Columns";
+            this.Column.FillWeight = 5F;
+            this.Column.HeaderText = "Check";
+            this.Column.MinimumWidth = 6;
+            this.Column.Name = "Column";
             // 
             // withGrantOptionCheckBox
             // 
@@ -177,19 +174,26 @@
             this.withGrantOptionCheckBox.Text = "WITH GRANT OPTION";
             this.withGrantOptionCheckBox.UseVisualStyleBackColor = true;
             // 
-            // Column
+            // grantToColCheckBox
             // 
-            this.Column.FillWeight = 5F;
-            this.Column.HeaderText = "Check";
-            this.Column.Name = "Column";
+            this.grantToColCheckBox.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.grantToColCheckBox.AutoSize = true;
+            this.grantToColCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grantToColCheckBox.Location = new System.Drawing.Point(739, 92);
+            this.grantToColCheckBox.Name = "grantToColCheckBox";
+            this.grantToColCheckBox.Size = new System.Drawing.Size(273, 24);
+            this.grantToColCheckBox.TabIndex = 28;
+            this.grantToColCheckBox.Text = "GRANT TO COLUMS LEVEL";
+            this.grantToColCheckBox.UseVisualStyleBackColor = true;
+            this.grantToColCheckBox.CheckedChanged += new System.EventHandler(this.grantToColCheckBox_CheckedChanged);
             // 
             // GrantUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.grantToColCheckBox);
             this.Controls.Add(this.withGrantOptionCheckBox);
-            this.Controls.Add(this.attributesLabel);
             this.Controls.Add(this.attributesDGV);
             this.Controls.Add(this.selectTableComboBox);
             this.Controls.Add(this.selectTabLabel);
@@ -223,8 +227,8 @@
         private System.Windows.Forms.Label selectTabLabel;
         private System.Windows.Forms.ComboBox selectTableComboBox;
         private System.Windows.Forms.DataGridView attributesDGV;
-        private System.Windows.Forms.Label attributesLabel;
         private System.Windows.Forms.CheckBox withGrantOptionCheckBox;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column;
+        private System.Windows.Forms.CheckBox grantToColCheckBox;
     }
 }

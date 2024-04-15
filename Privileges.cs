@@ -259,7 +259,7 @@ namespace UsersManagement
             {
                 RolesPRivsLoadByCol(sender, e);
             }
-            else if (toTabCheckBox1.Checked == true)
+            else if (totableCheckBox2.Checked == true)
             {
 
                 string query = "SELECT R.ROLE, " +
@@ -312,14 +312,6 @@ namespace UsersManagement
             {
                 GrantUser target = new GrantUser();
                 target.UsernameSelected = UserName;
-                if (toTabCheckBox1.Checked == true)
-                {
-                    target.IsCol = false;
-                }
-                else
-                {
-                    target.IsCol = true;
-                }
                 target.Show();
             }
             else
@@ -372,14 +364,7 @@ namespace UsersManagement
             {
                 GrantRole target = new GrantRole();
                 target.RoleSelected = RoleName;
-                if (toTabCheckBox1.Checked == true)
-                {
-                    target.IsCol = false;
-                }
-                else
-                {
-                    target.IsCol = true;
-                }
+             
                 target.Show();
             }
             else

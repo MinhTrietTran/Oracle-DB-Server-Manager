@@ -17,7 +17,7 @@ namespace UsersManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Privileges());
+            Application.Run(new Login());
         }
     }
 }
