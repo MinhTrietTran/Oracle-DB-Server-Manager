@@ -31,3 +31,5 @@ E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.Privileges.resource
 E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.GrantRoleForUser.resources
 E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.RevokeRoleFromUser.resources
 E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.Login.resources
+E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.GrantUser.resources
+E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.GrantRole.resources

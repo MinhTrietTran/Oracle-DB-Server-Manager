@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,8 +12,11 @@ using System.Windows.Forms;
 
 namespace UsersManagement
 {
+    
     public partial class Privileges : Form
     {
+        private string UserName;
+        private string RoleName;
         Modify modify = new Modify();
         public Privileges()
         {
@@ -192,6 +196,7 @@ namespace UsersManagement
             if (usersPrivsDGV.SelectedRows.Count > 0)
             {
                 userNameTextBox.Text = usersPrivsDGV.SelectedRows[0].Cells[0].Value.ToString();
+                UserName = usersPrivsDGV.SelectedRows[0].Cells[0].Value.ToString();
             }
         }
         private void userNameTextBox_TextChanged(object sender, EventArgs e)
@@ -239,6 +244,7 @@ namespace UsersManagement
             if (rolesPrivsDGV.SelectedRows.Count > 0)
             {
                 roleNameTextBox.Text = rolesPrivsDGV.SelectedRows[0].Cells[0].Value.ToString();
+                RoleName = rolesPrivsDGV.SelectedRows[0].Cells[0].Value.ToString();
             }
         }
         private void roleNameTextBox_TextChanged(object sender, EventArgs e)
@@ -295,9 +301,131 @@ namespace UsersManagement
                 e.KeyChar = char.ToUpper(e.KeyChar);
             }
         }
+        //
+        // GRATING AND REVOKING
+        //
+        // Users===========
+        // Granting in another form
+        private void grantBtn1_Click(object sender, EventArgs e)
+        {
+            if (usersPrivsDGV.SelectedRows.Count > 0)
+            {
+                GrantUser target = new GrantUser();
+                target.UsernameSelected = UserName;
+                if (toTabCheckBox1.Checked == true)
+                {
+                    target.IsCol = false;
+                }
+                else
+                {
+                    target.IsCol = true;
+                }
+                target.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please choose the user you want to grant !");
+            }
+        }
+        // Revoking in this form
+        private void revokeBtn1_Click(object sender, EventArgs e)
+        {
+            string username = usersPrivsDGV.SelectedRows[0].Cells[0].Value.ToString();
+            string privilege = usersPrivsDGV.SelectedRows[0].Cells[3].Value.ToString();
+            string table = usersPrivsDGV.SelectedRows[0].Cells[1].Value.ToString();
+            //string column = "";
+
+            if (MessageBox.Show("Are you sure you want to revoke this privilege from the this user?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+
+                try
+                {
+                    using (OracleConnection oracleConnection = Connection.GetOracleConnection())
+                    {
+                        oracleConnection.Open();
+                        string query = $"REVOKE {privilege} ON {table} FROM {username}";
+
+                        using (OracleCommand command = new OracleCommand(query, oracleConnection))
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Role revoked successfully.");
+                        }
+                        oracleConnection.Close();
+                    }
 
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error revoking role: " + ex.Message);
+                }
 
-        
+            }
+        }
+
+
+        // ROLE=================================
+        // Granting in another form
+        private void grantBtn2_Click(object sender, EventArgs e)
+        {
+            if (rolesPrivsDGV.SelectedRows.Count > 0)
+            {
+                GrantRole target = new GrantRole();
+                target.RoleSelected = RoleName;
+                if (toTabCheckBox1.Checked == true)
+                {
+                    target.IsCol = false;
+                }
+                else
+                {
+                    target.IsCol = true;
+                }
+                target.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please choose the role you want to grant !");
+            }
+        }
+
+        private void revokeBtn2_Click(object sender, EventArgs e)
+        {
+            string role = rolesPrivsDGV.SelectedRows[0].Cells[0].Value.ToString();
+            string privilege = rolesPrivsDGV.SelectedRows[0].Cells[3].Value.ToString();
+            string table = rolesPrivsDGV.SelectedRows[0].Cells[1].Value.ToString();
+            //string column = "";
+
+            if (MessageBox.Show("Are you sure you want to revoke this privilege from the this user?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+
+                try
+                {
+                    using (OracleConnection oracleConnection = Connection.GetOracleConnection())
+                    {
+                        oracleConnection.Open();
+                        string query = $"REVOKE {privilege} ON {table} FROM {role}";
+
+                        using (OracleCommand command = new OracleCommand(query, oracleConnection))
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Role revoked successfully.");
+                        }
+                        oracleConnection.Close();
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error revoking role: " + ex.Message);
+                }
+
+            }
+        }
+
+
+        // Revoking in this form
+
+
     }
 }

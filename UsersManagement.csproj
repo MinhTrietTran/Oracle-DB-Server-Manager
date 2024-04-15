@@ -86,11 +86,23 @@
     <Compile Include="EditUser.Designer.cs">
       <DependentUpon>EditUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="GrantRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrantRole.Designer.cs">
+      <DependentUpon>GrantRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="GrantRoleForUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GrantRoleForUser.Designer.cs">
       <DependentUpon>GrantRoleForUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GrantUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrantUser.Designer.cs">
+      <DependentUpon>GrantUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -137,8 +149,14 @@
     <EmbeddedResource Include="EditUser.resx">
       <DependentUpon>EditUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GrantRole.resx">
+      <DependentUpon>GrantRole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GrantRoleForUser.resx">
       <DependentUpon>GrantRoleForUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrantUser.resx">
+      <DependentUpon>GrantUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

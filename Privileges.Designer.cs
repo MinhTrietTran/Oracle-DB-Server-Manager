@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.revokeBtn1 = new System.Windows.Forms.Button();
+            this.grantBtn1 = new System.Windows.Forms.Button();
+            this.toColCheckBox1 = new System.Windows.Forms.CheckBox();
+            this.toTabCheckBox1 = new System.Windows.Forms.CheckBox();
             this.usersPrivsDGV = new System.Windows.Forms.DataGridView();
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.userNameLabel = new System.Windows.Forms.Label();
@@ -42,17 +46,13 @@
             this.appName = new System.Windows.Forms.Label();
             this.exitBtn = new System.Windows.Forms.Button();
             this.rightPanel = new System.Windows.Forms.Panel();
+            this.revokeBtn2 = new System.Windows.Forms.Button();
+            this.grantBtn2 = new System.Windows.Forms.Button();
+            this.toColCheckBox2 = new System.Windows.Forms.CheckBox();
+            this.totableCheckBox2 = new System.Windows.Forms.CheckBox();
             this.roleNameTextBox = new System.Windows.Forms.TextBox();
             this.roleNameLabel = new System.Windows.Forms.Label();
             this.rolesPrivsDGV = new System.Windows.Forms.DataGridView();
-            this.toTabCheckBox1 = new System.Windows.Forms.CheckBox();
-            this.toColCheckBox1 = new System.Windows.Forms.CheckBox();
-            this.totableCheckBox2 = new System.Windows.Forms.CheckBox();
-            this.toColCheckBox2 = new System.Windows.Forms.CheckBox();
-            this.grantBtn = new System.Windows.Forms.Button();
-            this.revokeBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersPrivsDGV)).BeginInit();
             this.toolBarPanel.SuspendLayout();
@@ -63,8 +63,8 @@
             // leftPanel
             // 
             this.leftPanel.BackColor = System.Drawing.Color.SteelBlue;
-            this.leftPanel.Controls.Add(this.revokeBtn);
-            this.leftPanel.Controls.Add(this.grantBtn);
+            this.leftPanel.Controls.Add(this.revokeBtn1);
+            this.leftPanel.Controls.Add(this.grantBtn1);
             this.leftPanel.Controls.Add(this.toColCheckBox1);
             this.leftPanel.Controls.Add(this.toTabCheckBox1);
             this.leftPanel.Controls.Add(this.usersPrivsDGV);
@@ -74,6 +74,58 @@
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(620, 590);
             this.leftPanel.TabIndex = 9;
+            // 
+            // revokeBtn1
+            // 
+            this.revokeBtn1.BackColor = System.Drawing.Color.Red;
+            this.revokeBtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revokeBtn1.ForeColor = System.Drawing.Color.White;
+            this.revokeBtn1.Location = new System.Drawing.Point(165, 55);
+            this.revokeBtn1.Name = "revokeBtn1";
+            this.revokeBtn1.Size = new System.Drawing.Size(113, 36);
+            this.revokeBtn1.TabIndex = 12;
+            this.revokeBtn1.Text = "Revoke";
+            this.revokeBtn1.UseVisualStyleBackColor = false;
+            this.revokeBtn1.Click += new System.EventHandler(this.revokeBtn1_Click);
+            // 
+            // grantBtn1
+            // 
+            this.grantBtn1.BackColor = System.Drawing.Color.Lime;
+            this.grantBtn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grantBtn1.ForeColor = System.Drawing.Color.Black;
+            this.grantBtn1.Location = new System.Drawing.Point(26, 55);
+            this.grantBtn1.Name = "grantBtn1";
+            this.grantBtn1.Size = new System.Drawing.Size(113, 36);
+            this.grantBtn1.TabIndex = 11;
+            this.grantBtn1.Text = "Grant";
+            this.grantBtn1.UseVisualStyleBackColor = false;
+            this.grantBtn1.Click += new System.EventHandler(this.grantBtn1_Click);
+            // 
+            // toColCheckBox1
+            // 
+            this.toColCheckBox1.AutoSize = true;
+            this.toColCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toColCheckBox1.Location = new System.Drawing.Point(472, 44);
+            this.toColCheckBox1.Name = "toColCheckBox1";
+            this.toColCheckBox1.Size = new System.Drawing.Size(136, 29);
+            this.toColCheckBox1.TabIndex = 10;
+            this.toColCheckBox1.Text = "To columns";
+            this.toColCheckBox1.UseVisualStyleBackColor = true;
+            this.toColCheckBox1.CheckedChanged += new System.EventHandler(this.toColCheckBox1_CheckedChanged);
+            // 
+            // toTabCheckBox1
+            // 
+            this.toTabCheckBox1.AutoSize = true;
+            this.toTabCheckBox1.Checked = true;
+            this.toTabCheckBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toTabCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toTabCheckBox1.Location = new System.Drawing.Point(472, 9);
+            this.toTabCheckBox1.Name = "toTabCheckBox1";
+            this.toTabCheckBox1.Size = new System.Drawing.Size(115, 29);
+            this.toTabCheckBox1.TabIndex = 9;
+            this.toTabCheckBox1.Text = "To tables";
+            this.toTabCheckBox1.UseVisualStyleBackColor = true;
+            this.toTabCheckBox1.CheckStateChanged += new System.EventHandler(this.toTabCheckBox1_CheckStateChanged);
             // 
             // usersPrivsDGV
             // 
@@ -226,8 +278,8 @@
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.Color.SteelBlue;
-            this.rightPanel.Controls.Add(this.button1);
-            this.rightPanel.Controls.Add(this.button2);
+            this.rightPanel.Controls.Add(this.revokeBtn2);
+            this.rightPanel.Controls.Add(this.grantBtn2);
             this.rightPanel.Controls.Add(this.toColCheckBox2);
             this.rightPanel.Controls.Add(this.totableCheckBox2);
             this.rightPanel.Controls.Add(this.roleNameTextBox);
@@ -237,6 +289,58 @@
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(620, 590);
             this.rightPanel.TabIndex = 10;
+            // 
+            // revokeBtn2
+            // 
+            this.revokeBtn2.BackColor = System.Drawing.Color.Red;
+            this.revokeBtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revokeBtn2.ForeColor = System.Drawing.Color.White;
+            this.revokeBtn2.Location = new System.Drawing.Point(168, 55);
+            this.revokeBtn2.Name = "revokeBtn2";
+            this.revokeBtn2.Size = new System.Drawing.Size(113, 36);
+            this.revokeBtn2.TabIndex = 14;
+            this.revokeBtn2.Text = "Revoke";
+            this.revokeBtn2.UseVisualStyleBackColor = false;
+            this.revokeBtn2.Click += new System.EventHandler(this.revokeBtn2_Click);
+            // 
+            // grantBtn2
+            // 
+            this.grantBtn2.BackColor = System.Drawing.Color.Lime;
+            this.grantBtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grantBtn2.ForeColor = System.Drawing.Color.Black;
+            this.grantBtn2.Location = new System.Drawing.Point(29, 55);
+            this.grantBtn2.Name = "grantBtn2";
+            this.grantBtn2.Size = new System.Drawing.Size(113, 36);
+            this.grantBtn2.TabIndex = 13;
+            this.grantBtn2.Text = "Grant";
+            this.grantBtn2.UseVisualStyleBackColor = false;
+            this.grantBtn2.Click += new System.EventHandler(this.grantBtn2_Click);
+            // 
+            // toColCheckBox2
+            // 
+            this.toColCheckBox2.AutoSize = true;
+            this.toColCheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toColCheckBox2.Location = new System.Drawing.Point(472, 44);
+            this.toColCheckBox2.Name = "toColCheckBox2";
+            this.toColCheckBox2.Size = new System.Drawing.Size(136, 29);
+            this.toColCheckBox2.TabIndex = 11;
+            this.toColCheckBox2.Text = "To columns";
+            this.toColCheckBox2.UseVisualStyleBackColor = true;
+            this.toColCheckBox2.CheckStateChanged += new System.EventHandler(this.toColCheckBox2_CheckStateChanged);
+            // 
+            // totableCheckBox2
+            // 
+            this.totableCheckBox2.AutoSize = true;
+            this.totableCheckBox2.Checked = true;
+            this.totableCheckBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.totableCheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totableCheckBox2.Location = new System.Drawing.Point(472, 7);
+            this.totableCheckBox2.Name = "totableCheckBox2";
+            this.totableCheckBox2.Size = new System.Drawing.Size(115, 29);
+            this.totableCheckBox2.TabIndex = 11;
+            this.totableCheckBox2.Text = "To tables";
+            this.totableCheckBox2.UseVisualStyleBackColor = true;
+            this.totableCheckBox2.CheckStateChanged += new System.EventHandler(this.totableCheckBox2_CheckStateChanged);
             // 
             // roleNameTextBox
             // 
@@ -273,106 +377,6 @@
             this.rolesPrivsDGV.Size = new System.Drawing.Size(591, 470);
             this.rolesPrivsDGV.TabIndex = 9;
             this.rolesPrivsDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rolesPrivsDGV_CellClick);
-            // 
-            // toTabCheckBox1
-            // 
-            this.toTabCheckBox1.AutoSize = true;
-            this.toTabCheckBox1.Checked = true;
-            this.toTabCheckBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toTabCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toTabCheckBox1.Location = new System.Drawing.Point(472, 9);
-            this.toTabCheckBox1.Name = "toTabCheckBox1";
-            this.toTabCheckBox1.Size = new System.Drawing.Size(115, 29);
-            this.toTabCheckBox1.TabIndex = 9;
-            this.toTabCheckBox1.Text = "To tables";
-            this.toTabCheckBox1.UseVisualStyleBackColor = true;
-            this.toTabCheckBox1.CheckStateChanged += new System.EventHandler(this.toTabCheckBox1_CheckStateChanged);
-            // 
-            // toColCheckBox1
-            // 
-            this.toColCheckBox1.AutoSize = true;
-            this.toColCheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toColCheckBox1.Location = new System.Drawing.Point(472, 44);
-            this.toColCheckBox1.Name = "toColCheckBox1";
-            this.toColCheckBox1.Size = new System.Drawing.Size(136, 29);
-            this.toColCheckBox1.TabIndex = 10;
-            this.toColCheckBox1.Text = "To columns";
-            this.toColCheckBox1.UseVisualStyleBackColor = true;
-            this.toColCheckBox1.CheckedChanged += new System.EventHandler(this.toColCheckBox1_CheckedChanged);
-            // 
-            // totableCheckBox2
-            // 
-            this.totableCheckBox2.AutoSize = true;
-            this.totableCheckBox2.Checked = true;
-            this.totableCheckBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.totableCheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totableCheckBox2.Location = new System.Drawing.Point(472, 7);
-            this.totableCheckBox2.Name = "totableCheckBox2";
-            this.totableCheckBox2.Size = new System.Drawing.Size(115, 29);
-            this.totableCheckBox2.TabIndex = 11;
-            this.totableCheckBox2.Text = "To tables";
-            this.totableCheckBox2.UseVisualStyleBackColor = true;
-            this.totableCheckBox2.CheckStateChanged += new System.EventHandler(this.totableCheckBox2_CheckStateChanged);
-            // 
-            // toColCheckBox2
-            // 
-            this.toColCheckBox2.AutoSize = true;
-            this.toColCheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toColCheckBox2.Location = new System.Drawing.Point(472, 44);
-            this.toColCheckBox2.Name = "toColCheckBox2";
-            this.toColCheckBox2.Size = new System.Drawing.Size(136, 29);
-            this.toColCheckBox2.TabIndex = 11;
-            this.toColCheckBox2.Text = "To columns";
-            this.toColCheckBox2.UseVisualStyleBackColor = true;
-            this.toColCheckBox2.CheckStateChanged += new System.EventHandler(this.toColCheckBox2_CheckStateChanged);
-            // 
-            // grantBtn
-            // 
-            this.grantBtn.BackColor = System.Drawing.Color.Lime;
-            this.grantBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grantBtn.ForeColor = System.Drawing.Color.Black;
-            this.grantBtn.Location = new System.Drawing.Point(26, 55);
-            this.grantBtn.Name = "grantBtn";
-            this.grantBtn.Size = new System.Drawing.Size(113, 36);
-            this.grantBtn.TabIndex = 11;
-            this.grantBtn.Text = "Grant";
-            this.grantBtn.UseVisualStyleBackColor = false;
-            // 
-            // revokeBtn
-            // 
-            this.revokeBtn.BackColor = System.Drawing.Color.Red;
-            this.revokeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.revokeBtn.ForeColor = System.Drawing.Color.White;
-            this.revokeBtn.Location = new System.Drawing.Point(165, 55);
-            this.revokeBtn.Name = "revokeBtn";
-            this.revokeBtn.Size = new System.Drawing.Size(113, 36);
-            this.revokeBtn.TabIndex = 12;
-            this.revokeBtn.Text = "Revoke";
-            this.revokeBtn.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(168, 55);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 36);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Revoke";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Lime;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(29, 55);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 36);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Grant";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // Privileges
             // 
@@ -423,9 +427,9 @@
         private System.Windows.Forms.CheckBox toColCheckBox1;
         private System.Windows.Forms.CheckBox toColCheckBox2;
         private System.Windows.Forms.CheckBox totableCheckBox2;
-        private System.Windows.Forms.Button grantBtn;
-        private System.Windows.Forms.Button revokeBtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button grantBtn1;
+        private System.Windows.Forms.Button revokeBtn1;
+        private System.Windows.Forms.Button revokeBtn2;
+        private System.Windows.Forms.Button grantBtn2;
     }
 }
