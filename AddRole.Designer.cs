@@ -59,6 +59,7 @@
             this.roleTextBox.Name = "roleTextBox";
             this.roleTextBox.Size = new System.Drawing.Size(230, 24);
             this.roleTextBox.TabIndex = 12;
+            this.roleTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.roleTextBox_KeyPress);
             // 
             // userNameLabel
             // 
@@ -138,6 +139,7 @@
             this.Controls.Add(this.addANewRoleLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddRole";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddRole";
             this.ResumeLayout(false);
             this.PerformLayout();

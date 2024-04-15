@@ -80,6 +80,7 @@
             this.userNameTextBox.Size = new System.Drawing.Size(230, 24);
             this.userNameTextBox.TabIndex = 6;
             this.userNameTextBox.TextChanged += new System.EventHandler(this.userNameTextBox_TextChanged);
+            this.userNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userNameTextBox_KeyPress);
             // 
             // passwordTextBox
             // 
@@ -143,6 +144,7 @@
             this.Controls.Add(this.addANewUserLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddUser";
             this.ResumeLayout(false);
             this.PerformLayout();

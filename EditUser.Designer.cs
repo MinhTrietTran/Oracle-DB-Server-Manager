@@ -115,6 +115,7 @@
             this.Controls.Add(this.changeUserPasswordLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditUser";
             this.ResumeLayout(false);
             this.PerformLayout();

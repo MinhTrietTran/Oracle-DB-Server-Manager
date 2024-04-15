@@ -31,10 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.exitBtn = new System.Windows.Forms.Button();
             this.uSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new UsersManagement.DataSet1();
-            this.uSER_TableAdapter = new UsersManagement.DataSet1TableAdapters.USER_TableAdapter();
+            //this.dataSet1 = new UsersManagement.DataSet1();
+            //this.uSER_TableAdapter = new UsersManagement.DataSet1TableAdapters.USER_TableAdapter();
             this.usersDGV = new System.Windows.Forms.DataGridView();
             this.toolBarPanel = new System.Windows.Forms.Panel();
+            this.refreshBtn = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.usersAndRolesBtn = new System.Windows.Forms.Button();
             this.privilegesBtn = new System.Windows.Forms.Button();
@@ -54,7 +55,7 @@
             this.roleNameTextBox = new System.Windows.Forms.TextBox();
             this.roleNameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDGV)).BeginInit();
             this.toolBarPanel.SuspendLayout();
             this.leftPanel.SuspendLayout();
@@ -78,16 +79,16 @@
             // uSERBindingSource
             // 
             this.uSERBindingSource.DataMember = "USER$";
-            this.uSERBindingSource.DataSource = this.dataSet1;
+            //this.uSERBindingSource.DataSource = this.dataSet1;
             // 
             // dataSet1
             // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.dataSet1.DataSetName = "DataSet1";
+            //this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // uSER_TableAdapter
             // 
-            this.uSER_TableAdapter.ClearBeforeFill = true;
+            //this.uSER_TableAdapter.ClearBeforeFill = true;
             // 
             // usersDGV
             // 
@@ -105,6 +106,7 @@
             // toolBarPanel
             // 
             this.toolBarPanel.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.toolBarPanel.Controls.Add(this.refreshBtn);
             this.toolBarPanel.Controls.Add(this.logoutBtn);
             this.toolBarPanel.Controls.Add(this.usersAndRolesBtn);
             this.toolBarPanel.Controls.Add(this.privilegesBtn);
@@ -116,16 +118,29 @@
             this.toolBarPanel.Size = new System.Drawing.Size(1280, 100);
             this.toolBarPanel.TabIndex = 2;
             // 
+            // refreshBtn
+            // 
+            this.refreshBtn.BackColor = System.Drawing.Color.LightBlue;
+            this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshBtn.Location = new System.Drawing.Point(768, 56);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(255, 45);
+            this.refreshBtn.TabIndex = 5;
+            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.UseVisualStyleBackColor = false;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
+            // 
             // logoutBtn
             // 
             this.logoutBtn.BackColor = System.Drawing.Color.LightBlue;
             this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.Location = new System.Drawing.Point(769, 56);
+            this.logoutBtn.Location = new System.Drawing.Point(1021, 56);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Size = new System.Drawing.Size(259, 45);
             this.logoutBtn.TabIndex = 4;
             this.logoutBtn.Text = "Log out";
             this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // usersAndRolesBtn
             // 
@@ -148,6 +163,7 @@
             this.privilegesBtn.TabIndex = 2;
             this.privilegesBtn.Text = "Privileges ";
             this.privilegesBtn.UseVisualStyleBackColor = false;
+            this.privilegesBtn.Click += new System.EventHandler(this.privilegesBtn_Click);
             // 
             // systemUsersBtn
             // 
@@ -234,6 +250,7 @@
             this.userNameTextBox.Size = new System.Drawing.Size(230, 24);
             this.userNameTextBox.TabIndex = 5;
             this.userNameTextBox.TextChanged += new System.EventHandler(this.userNameTextBox_TextChanged);
+            this.userNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userNameTextBox_KeyPress);
             // 
             // userNameLabel
             // 
@@ -320,6 +337,7 @@
             this.roleNameTextBox.Size = new System.Drawing.Size(237, 22);
             this.roleNameTextBox.TabIndex = 9;
             this.roleNameTextBox.TextChanged += new System.EventHandler(this.roleNameTextBox_TextChanged);
+            this.roleNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.roleNameTextBox_KeyPress);
             // 
             // roleNameLabel
             // 
@@ -349,7 +367,7 @@
             this.Text = "UsersAndRoles";
             this.Load += new System.EventHandler(this.UsersAndRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uSERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDGV)).EndInit();
             this.toolBarPanel.ResumeLayout(false);
             this.toolBarPanel.PerformLayout();
@@ -365,9 +383,9 @@
         #endregion
 
         private System.Windows.Forms.Button exitBtn;
-        private DataSet1 dataSet1;
+        //private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource uSERBindingSource;
-        private DataSet1TableAdapters.USER_TableAdapter uSER_TableAdapter;
+        //private DataSet1TableAdapters.USER_TableAdapter uSER_TableAdapter;
         private System.Windows.Forms.DataGridView usersDGV;
         private System.Windows.Forms.Panel toolBarPanel;
         private System.Windows.Forms.Panel leftPanel;
@@ -388,5 +406,6 @@
         private System.Windows.Forms.Button editRoleBtn;
         private System.Windows.Forms.Button deleteRoleBtn;
         private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button refreshBtn;
     }
 }

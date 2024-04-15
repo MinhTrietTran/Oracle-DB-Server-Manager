@@ -27,3 +27,7 @@ E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.EditUser.resources
 E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.AddRole.resources
 E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.EditRole.resources
 E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.SystemUsers.resources
+E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.Privileges.resources
+E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.GrantRoleForUser.resources
+E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.RevokeRoleFromUser.resources
+E:\trietmlRoot\App\UsersManagement\obj\Debug\UsersManagement.Login.resources

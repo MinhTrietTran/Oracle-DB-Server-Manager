@@ -17,7 +17,7 @@ namespace UsersManagement
         {
         }
         //OracleDataAdapter dataAdapter;
-        SqlCommand sqlCommand;
+        //SqlCommand sqlCommand;
         public DataTable Table(string query) // Tra ve bang du lieu
         {
             DataTable dataTable = new DataTable();

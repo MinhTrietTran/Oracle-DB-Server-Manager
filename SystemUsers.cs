@@ -12,6 +12,7 @@ namespace UsersManagement
 {
     public partial class SystemUsers : Form
     {
+        private string UserName;
         public SystemUsers()
         {
             InitializeComponent();
@@ -21,7 +22,13 @@ namespace UsersManagement
         {
             try
             {
-                usersDGV.DataSource = modify.Table("SELECT * FROM all_users ");
+                usersDGV.DataSource = modify.Table("SELECT U.USERNAME, " +
+                                                            "COALESCE(DRP.GRANTED_ROLE, 'N/A') AS GRANTED_ROLE, "+
+                                                            "COALESCE(DRP.ADMIN_OPTION, 'N/A') AS ADMIN_OPTION, " +
+                                                            "COALESCE(DRP.DEFAULT_ROLE, 'N/A') AS DEFAULT_ROLE, " +
+                                                            "COALESCE(DRP.INHERITED, 'N/A') AS INHERITED " +
+                                                    "FROM  DBA_USERS U " +
+                                                    "LEFT JOIN DBA_ROLE_PRIVS DRP ON  U.USERNAME = DRP.GRANTEE");
             }
             catch (Exception ex)
             {
@@ -40,7 +47,15 @@ namespace UsersManagement
             }
             else
             {
-                string query = "SELECT * FROM all_users WHERE USERNAME LIKE '%" + userName + "%'";
+                // ERROR
+                string query = "SELECT U.USERNAME, " +
+                                                            "COALESCE(DRP.GRANTED_ROLE, 'N/A') AS GRANTED_ROLE, " +
+                                                            "COALESCE(DRP.ADMIN_OPTION, 'N/A') AS ADMIN_OPTION, " +
+                                                            "COALESCE(DRP.DEFAULT_ROLE, 'N/A') AS DEFAULT_ROLE, " +
+                                                            "COALESCE(DRP.INHERITED, 'N/A') AS INHERITED " +
+                                                    "FROM  DBA_USERS U " +
+                                                    "LEFT JOIN DBA_ROLE_PRIVS DRP ON  U.USERNAME = DRP.GRANTEE " +
+                                                    "WHERE UPPER(U.USERNAME) LIKE '%" + userName + "%' ";
                 usersDGV.DataSource = modify.Table(query);
             }
         }
@@ -78,6 +93,73 @@ namespace UsersManagement
             UsersAndRoles obj = new UsersAndRoles();
             this.Hide();
             obj.Show();
+        }
+
+        // Refresh
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            SystemUsers_Load(sender, e);
+        }
+
+        private void searchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLower(e.KeyChar))
+            {
+                e.KeyChar = char.ToUpper(e.KeyChar);
+            }
+        }
+
+        // Grant
+        private void grantBtn_Click(object sender, EventArgs e)
+        {
+            if (usersDGV.SelectedRows.Count > 0)
+            {
+                GrantRoleForUser target = new GrantRoleForUser();
+                target.UsernameSelected =  UserName;
+                target.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please choose the user you want to grant role !");
+            }
+        }
+
+        // Get username by cell click
+        private void usersDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (usersDGV.SelectedRows.Count > 0)
+            {
+                UserName = usersDGV.SelectedRows[0].Cells[0].Value.ToString();
+            }
+             
+        }
+
+        private void revokeBtn_Click(object sender, EventArgs e)
+        {
+            if (usersDGV.SelectedRows.Count > 0)
+            {
+                RevokeRoleFromUser target = new RevokeRoleFromUser();
+                target.UsernameSelected = UserName;
+                target.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please choose the user you want to revoke role !");
+            }
+        }
+
+        private void privilegesBtn_Click(object sender, EventArgs e)
+        {
+            Privileges obj = new Privileges();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
         }
     }
 }

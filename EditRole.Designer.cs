@@ -128,6 +128,7 @@
             this.Controls.Add(this.changeRolePasswordLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditRole";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditRole";
             this.ResumeLayout(false);
             this.PerformLayout();

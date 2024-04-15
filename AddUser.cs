@@ -102,6 +102,14 @@ namespace UsersManagement
         {
             this.Hide();
         }
+
+        private void userNameTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLower(e.KeyChar))
+            {
+                e.KeyChar = char.ToUpper(e.KeyChar);
+            }
+        }
     }
     }
 

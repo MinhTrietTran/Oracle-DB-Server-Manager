@@ -233,5 +233,42 @@ namespace UsersManagement
             this.Hide();
             obj.Show();
         }
+
+        // Reload page
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            UsersAndRoles_Load(sender,e);
+        }
+
+        // Auto uppercase
+        private void userNameTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLower(e.KeyChar))
+            {
+                e.KeyChar = char.ToUpper(e.KeyChar);
+            }
+        }
+
+        private void roleNameTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLower(e.KeyChar))
+            {
+                e.KeyChar = char.ToUpper(e.KeyChar);
+            }
+        }
+
+        private void privilegesBtn_Click(object sender, EventArgs e)
+        {
+            Privileges obj = new Privileges();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
